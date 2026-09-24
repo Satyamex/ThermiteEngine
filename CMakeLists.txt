@@ -9,7 +9,8 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glfw)
 add_executable(ThermiteEngine
-    src/main.c
+    src/core/main.c
+    src/core/_windowing.c
     src/glad.c
 )
 target_include_directories(ThermiteEngine PRIVATE include)
