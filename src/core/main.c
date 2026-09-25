@@ -1,5 +1,5 @@
-#include <glad/glad.h>
-#include "core\_windowing.h"
+#include "core/_windowing.h"
+#include "core/_renderer.h"
 
 int main(void)
 {
@@ -8,9 +8,11 @@ int main(void)
     .height = 480,
     .title = "ThermiteEngine"
     };
+
     if (window_init() != 0)
         return -1;
     window_createwindow(&game_window);
-    window_handlewindow();
+    renderer_draw();
+
     return 0;
 }

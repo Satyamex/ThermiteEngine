@@ -11,6 +11,8 @@ FetchContent_MakeAvailable(glfw)
 add_executable(ThermiteEngine
     src/core/main.c
     src/core/_windowing.c
+    src/core/_renderer.c
+    src/core/_time.c
     src/glad.c
 )
 target_include_directories(ThermiteEngine PRIVATE include)

@@ -13,6 +13,5 @@ typedef struct {
 
 int window_init();
 int window_createwindow(GameWindow* gamewindow);
-void window_handlewindow(void);
 
 #endif

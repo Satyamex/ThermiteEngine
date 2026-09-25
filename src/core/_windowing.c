@@ -8,6 +8,9 @@ int window_init()
 {
     if (!glfwInit())
         return -1;
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     return 0;
 }
 
@@ -34,18 +37,4 @@ int window_createwindow(GameWindow* gamewindow)
     glfwSetFramebufferSizeCallback(window, window_onframebuffersize_changed);
 
     return 0;
-}
-
-void window_handlewindow(void)
-{
-    glClearColor(0.12f, 0.12f, 0.12f, 1.0f);
-
-    while (!glfwWindowShouldClose(window))
-    {
-        glClear(GL_COLOR_BUFFER_BIT);
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
-
-    glfwTerminate();
 }
